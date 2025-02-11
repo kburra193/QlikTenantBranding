@@ -1,8 +1,6 @@
 {
-    "primaryColor": "#007BFF",
-    "secondaryColor": "#28A745",
-    "backgroundColor": "#000000",
-    "textColor": "#333333",
-    "buttonColor": "#FFD700",
-    "font": "Arial"
+ 
+    "background": "black"
+   
+    
 }

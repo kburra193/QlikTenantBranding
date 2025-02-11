@@ -1,0 +1,14 @@
+{
+    "clients": [
+        {
+            "name": "Paratek",
+            "tenant_url": "karthikburra93.us.qlikcloud.com",
+            "logo": "logos/ParetekNewLogo.png",
+            "favicon": "favicons/paratekfavicon.ico",
+            "styles": "styles.json",
+            "brand_id": "67a97d2a0e158fa807f3c281",
+            "activated": true,
+            "api_key_env": "PARATEK_API_KEY"
+        }
+    ]
+}

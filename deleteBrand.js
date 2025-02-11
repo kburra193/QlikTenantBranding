@@ -3,7 +3,7 @@ const https = require("https");
 const options = {
   hostname: "karthikburra93.us.qlikcloud.com",
   port: 443,
-  path: "/api/v1/brands/679ec1d565fc7e63530ec778",
+  path: "/api/v1/brands/67a975c80e158fa807f3c1ca",
   method: "DELETE",
   headers: {
     Authorization:

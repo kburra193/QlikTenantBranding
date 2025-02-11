@@ -3,7 +3,7 @@ const https = require("https");
 const options = {
   hostname: "karthikburra93.us.qlikcloud.com",
   port: 443,
-  path: "/api/v1/brands/67a18d4069a1c9fbca184acf/actions/activate", //specify brand-id
+  path: "/api/v1/brands/67a61ac759469282ed97e8c0//actions/activate", //specify brand-id
   method: "POST",
   headers: {
     Authorization:

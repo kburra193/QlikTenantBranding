@@ -8,8 +8,8 @@ const TENANT_URL = process.env.QLIK_TENANT_URL; // No "https://"
 const API_KEY = process.env.QLIK_API_KEY;
 
 // Define file paths (Update with actual file paths)
-const logoPath = "logo.png";
-const faviconPath = "favicon.ico";
+const logoPath = "ParetekNewLogo.png";
+const faviconPath = "paratekfavicon.ico";
 const stylesPath = "styles.json";
 
 
