@@ -10,14 +10,14 @@ let clientsData = JSON.parse(fs.readFileSync(clientsFile, "utf-8"));
 // Function to get API key from `.env` based on `api_key_env` field
 function getApiKey(client) {
   if (!client.api_key_env) {
-    console.error(`No API key reference found for ${client.name}. Skipping...`);
+    console.error(`No API key reference found for ${client.name}.`);
     return null;
   }
 
   const apiKey = process.env[client.api_key_env];
   if (!apiKey) {
     console.error(
-      `API key ${client.api_key_env} is missing in .env for ${client.name}. Skipping...`
+      `API key ${client.api_key_env} is missing in .env for ${client.name}.`
     );
   }
   return apiKey;
@@ -31,7 +31,7 @@ function createBrand(client) {
     const apiKey = getApiKey(client);
 
     if (!fs.existsSync(logo) || !fs.existsSync(favicon)) {
-      console.error(`Missing branding files for ${name}. Skipping...`);
+      console.error(`Missing branding files for ${name}.`);
       return resolve(null);
     }
 
@@ -65,15 +65,15 @@ function createBrand(client) {
           const responseData = JSON.parse(data);
           if (res.statusCode === 201) {
             console.log(
-              `✅ Brand Created for ${name}. Brand ID: ${responseData.id}`
+              `Brand Created for ${name}. Brand ID: ${responseData.id}`
             );
             resolve(responseData.id);
           } else {
-            console.error(`❌ Failed for ${name}:`, responseData);
+            console.error(`Failed for ${name}:`, responseData);
             resolve(null);
           }
         } catch (error) {
-          console.error(`❌ Error parsing response for ${name}:`, error);
+          console.error(`Error parsing response for ${name}:`, error);
           resolve(null);
         }
       });
@@ -111,7 +111,7 @@ function activateBrand(client, brandId) {
 
       res.on("end", () => {
         if (res.statusCode === 200) {
-          console.log(`✅ Brand Activated for ${client.name}`);
+          console.log(`Brand Activated for ${client.name}`);
           resolve(true);
         } else {
           console.error(`Activation Failed for ${client.name}:`, data);
