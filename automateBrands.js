@@ -143,7 +143,7 @@ async function processClients() {
       }
     } else {
       console.log(
-        `ℹ️ Brand already exists for ${client.name}. Brand ID: ${client.brand_id}`
+        `Brand already exists for ${client.name}. Brand ID: ${client.brand_id}`
       );
     }
   }
